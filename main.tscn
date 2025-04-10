@@ -7,9 +7,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_at501"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -350.896, -615.904, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 480, 720, 0, 0, 0, 0, -271.448, 373.012, 0, 0, 0, 0, 0, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 480, 720, 0, 0, 0, 0, 0, 720, 0, 0, 0, 0, 0, 0)
 }
-point_count = 6
+point_count = 5
 
 [node name="Main" type="Node"]
 script = ExtResource("1_80do6")
@@ -22,7 +22,7 @@ visible = false
 wait_time = 0.5
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(83, 98)
+position = Vector2(240, 450)
 
 [node name="ScoreTimer" type="Timer" parent="."]
 
@@ -31,12 +31,9 @@ wait_time = 2.0
 one_shot = true
 
 [node name="MobPath" type="Path2D" parent="."]
-position = Vector2(216.809, 137.442)
-scale = Vector2(0.119148, 0.0299423)
 curve = SubResource("Curve2D_at501")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
-rotation = -2.08866
 
 [node name="HUD" parent="." instance=ExtResource("4_58kip")]
 
